@@ -1,0 +1,146 @@
+#carousel
+{
+	width:1000px;
+	margin:auto;
+	/* border: 1px solid black; */
+	color: #545454;
+	margin-top: 52px;
+	text-align: center;
+	position: relative;
+}
+.item
+{
+	width:203px;
+	height: 254px;
+	padding-top: 3px;
+	background-color: white;
+	border-radius:4px;
+	box-shadow: 0px 1px 4px 0px rgba(110, 110, 110, 0.35);
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 18px;
+
+
+}
+.item .price,.name_carousel,.view
+{
+	text-align: left;
+}
+.item:last-child
+{
+	margin-right: 0;
+	/*background-color: red;*/
+}
+#item_carousel_container /*This selector is used to select the last .item in order to delete the the margin */
+{
+	display: inline-block;
+}
+/*#item_carousel_container,.button_right  all properties have to change to initial if the right button is cliqued
+{
+	position: relative;
+	left:20px;
+}*/
+.img_container
+{
+	width: 164px;
+	height: 126px;
+	margin:auto;
+	/* background-color: #f4f4f4; */
+	border: 1.2px solid #dedede;
+	margin-bottom: 15px;
+	position: relative;
+}
+.categorie
+{
+	text-align: center;
+	margin-bottom: 3px;
+
+}
+.price
+{
+	font-family: 'brandon_black_italic';
+	color:#317399;
+	font-size: 18px;
+	margin-left: 19px;
+}
+.name_carousel,.view
+{
+	font-family: 'brandon_medium';
+	margin-left: 19px;
+}
+.img_container img
+{
+	position:absolute; 
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+.button
+{
+	width:43px;
+	height: 43px;
+	background-color: white;
+	border-radius:50%;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	box-shadow: 0px 1px 4px 0px rgba(110, 110, 110, 0.35);
+	position: relative;
+}
+.arrow_image_left
+{
+	position: absolute;
+	top:11px;
+	left: 14px;
+	transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+.arrow_image_right
+{
+	position: absolute;
+	top:11px;
+	left: 17px;
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+}
+.button_right
+{
+	margin-right: 0;
+	margin-left: 12px;
+}
+.button_left
+{
+	margin-right: 12px;
+}
+.round_container
+{
+	width: 180px;
+	margin: auto;
+	text-align: center;
+	margin-top: 18px;
+	/*position: relative;This propertiehave to change to initial if the right button is cliqued
+	right: 10px;/*This propertie have to change to initial if the right button is cliqued*/
+}
+.round_button
+{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius:50%;
+	background-color: gray;
+	box-shadow: 0px 1px 4px 0px rgba(110, 110, 110, 0.35);
+	margin-right: 5px;
+}
+.round_button:last-child
+{
+	margin-right: 0;
+}
+.round_button:first-child
+{
+	background-color: #317399;
+}
+.round_button_4,.round_button_5,.round_button_6,.round_button_7,.round_button_8,
+.round_button_9,.round_button_10
+{
+	display: none;
+}

@@ -1,0 +1,56 @@
+@media all and (max-width: 1025px) 
+{
+	.item:last-child
+	{
+		display: none;
+	}
+	#carousel
+	{
+		width: 100%;
+	}
+	.round_button_4
+	{
+		display: inline-block;
+	}
+}
+
+@media all and (max-width: 835px) 
+{
+	.item:nth-child(3)
+	{
+		display: none;
+	}
+	.round_button_5
+	{
+		display: inline-block;
+	}
+
+}
+@media all and (max-width: 625px) 
+{
+	.item:nth-child(2)
+	{
+		display: none;
+	}
+	.item
+	{
+		margin-right: 0;
+	}
+	.round_button_6,.round_button_7,.round_button_8,.round_button_9,
+	.round_button_10
+	{
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 340px) 
+{
+.button_left
+{
+	margin-right: 0;
+}
+.button_right
+{
+	margin-left: 0;
+}
+}
