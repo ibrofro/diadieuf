@@ -5,103 +5,36 @@
 	<link rel="stylesheet" type="text/css" href="prototype.css">
 </head>
 <body>
-	<div id="o">I'm a id element</div>
+<div id="o">I'm a id element</div>
+
+<div id="container">
 <div class="p">I'm a class element.</div>
 <div class="p">I'm a class element.</div>
 <div class="p">I'm a class element.</div>
+</div>
+	<style type="text/css">
+		.p:nth-child(2)
+		{
+			color: red;
+		}
 
-<script type="text/javascript">
-
-
-// function deleteByIdOrClass(array) {
-// 		if (typeof(array) === "object" && array[0] !== undefined) {
-// 			var unselectedElement = [];
-// 			var selectedElement = [];
-// 			var invalidElement = [];
-// 			for (var i = 0; i < array.length; i++) {
-// 				// if(array[i].charAt(0) === "#" || array[i].charAt(0) === '.')
-					
-// 				// {
-// 					if (typeof(array[i]) !== 'string' ) {
-// 					throw new Error('This is not a String : '+array[i]);
-// 					 }
-// 					if (array[i].charAt(0) === "#") {
-// 						var div = array[i].substring(1);
-// 						var sel_div = document.getElementById(div);
-// 						console.log(sel_div);
-// 						if(sel_div === undefined){
-// 								unselectedElement.push(array[i]);
-// 						}
-// 						 if(sel_div) {
-// 							selectedElement.push(array[i]);
-// 						}
-
-// 					}
-
-// 					if (array[i].charAt(0) === ".") {
-// 						var classe = array[i].substring(1);
-// 						var sel_classe = document.getElementsByClassName(classe)[0];
-// 						console.log(sel_classe);
-// 						if(sel_classe === undefined){
-// 							unselectedElement.push(array[i]);
-// 						} if (sel_classe){
-// 							selectedElement.push(array[i]);
-// 						}
-						
-// 					}
-// 					if (array[i].charAt(0) !== "." && array[i].charAt(0) !== "#") {
-						
-// 						invalidElement.push(array[i]);
-// 					}
-// 					if (i === array.length-1 && invalidElement.length > 0){
-// 						throw new Error('Invalid HtML Selector On The Argument Array : '+invalidElement.join(''));
-// 					}
-
-				
-// 			}
-
-// 			if (unselectedElement.length === 0) {
-				
-// 				for (var o = 0; o < selectedElement.length; o++) {
-// 					console.log(selectedElement);
-// 					console.log(unselectedElement);
-// 					var s = selectedElement[o].substring(1);
-// 				// console.log(s);
-// 					if (selectedElement[o].charAt(0) === '#') {
-// 						// var s = array[o].substring(1);
-// 						// console.log(s);
-// 						document.getElementById(s).style.display = 'none';
-// 						// console.log(document.getElementById(selectedElement[o].substring(1)));
-// 					} else{
-// 						// document.getElementsByClassName(array[o].substring(1))[0].style.display = 'none';
-// 						 var sel = document.getElementsByClassName(s)[0];
-// 			c			 sel.style.display = 'none';
-						 
-// 						//  console.log(sel);
-// 						// console.log(document.getElementsByClassName(array[o].substring(1))[0]);
-// 					}
-// 				}
-// 			} else{
-// 				throw new Error('Invalid Selector On The Argument Array : '+unselectedElement.join(','));
-// 			}
-// 			// if (selectedElement.length === array.length - 1) {
-
-// 			// } else {
-// 			// 	throw new Error('An');
-// 			// }	
-
-// 		} else {
-// 			throw new Error("Sorry this is not an Array");
-// 		}
-
-// 	}
-
-// 	// deleteByIdOrClass([1]);
-
-// </script>
-
+	</style>
 <script type="text/javascript" src="my_functions.js"></script>
+<script type="text/javascript">
+	var container = select('#container');
+	var con = container[0];
+	console.log(con);
+	var allClass = select('.p');
+	// for (var i = 0; i < allClass.length; i++) {
+	// 	document.body.removeChild(allClass[i]);
+	// }
+	 con.removeChild(con.firstChild.nextSibling);
+	// console.log(container[0].firstChild.nextSibling);
 
+
+
+
+</script>
 
 
 </script>	
