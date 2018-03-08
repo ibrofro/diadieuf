@@ -6,38 +6,381 @@
 </head>
 <body>
 <div id="o">I'm a id element</div>
+<div id="carousel">
 
-<div id="container">
-<div class="p">I'm a class element.</div>
-<div class="p">I'm a class element.</div>
-<div class="p">I'm a class element.</div>
+	<div class="button button_left">
+	<img class="arrow_image_left" src="icon/right.png" >
+	</div>
+
+	<div id="item_carousel_container">
+	<div class="item item_1">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/1.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Abdou Fall</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_2">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/2.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Sidy Ndiaye</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_3">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class= "carousel_image" src="carousel_image/3.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Mouhamed Samb</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_4">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/4.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Monsieur Faye</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_5">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/5.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Monsieur Faye</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_6">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/6.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Monsieur Faye</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_7">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/7.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Monsieur Faye</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_8">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/8.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Monsieur Faye</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_9">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/9.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Monsieur Faye</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_10">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/10.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Monsieur Faye</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	</div>
+
+	<div class="button button_right">
+	<img class="arrow_image_right" src="icon/right.png" >
+	</div>
+
+	<div class="round_container">
+	<div class="round_button round_button_1"></div>	
+	<div class="round_button round_button_2"></div>	
+	<div class="round_button round_button_3"></div>
+	<div class="round_button round_button_4"></div>
+	<div class="round_button round_button_5"></div>	
+	<div class="round_button round_button_6"></div>	
+	<div class="round_button round_button_7"></div>
+	<div class="round_button round_button_8"></div>
+	<div class="round_button round_button_9"></div>
+	<div class="round_button round_button_10"></div>						
+	</div>
 </div>
-	<style type="text/css">
-		.p:nth-child(2)
-		{
-			color: red;
-		}
 
-	</style>
 <script type="text/javascript" src="my_functions.js"></script>
 <script type="text/javascript">
-	var container = select('#container');
-	var con = container[0];
-	console.log(con);
-	var allClass = select('.p');
-	// for (var i = 0; i < allClass.length; i++) {
-	// 	document.body.removeChild(allClass[i]);
-	// }
-	 con.removeChild(con.firstChild.nextSibling);
-	// console.log(container[0].firstChild.nextSibling);
 
+function handleMargin() {
+	// This function handle the margins between items if the container hide or show elements.
+	var selection = select('.item');
+	var number = 0;
+	for (var i = 0; i < selection.length; i++) {
+		if (getComputedStyle(selection[i]).display === 'inline-block') {
+			number++;
+		} 
+	}
+	for (var i = number - 2; i > -1; i--) {
+			
+				selection[i].style.marginRight = '18px';
+				selection[i].style.color = 'red';
+
+				
+		}
+		// Put margin-right 0 for the last item on the container.
+	// for (var i = number - 1; i > -1; i--) {
+	// 			selection[i].style.marginRight = 0+'px';
+	// }
+// alert(number);
+
+}
+
+function show(number) {
+	if (typeof(number) === 'number' && number < 11 && number > 0) {
+		var selection = select(".item");
+		for (var i = 0; i < number; i++) {
+			selection[i].style.display = 'inline-block';
+		}
+			
+	} else {
+		err('Unvalid parameter');
+	}
+	handleMargin();
+}
+
+function hideAll() {
+	var selection = select(".item");
+	for (var i = 0; i < selection.length; i++) {
+			selection[i].style.display = 'none';
+		}
+}
+function init() {
+	//This function gonna display the correct number of items on the carousel.
+	if (window.innerWidth <= 1025 && window.innerWidth > 835) {
+		hideAll();
+		show(3);
+	} else if (window.innerWidth <= 835 && window.innerWidth> 625) {
+		hideAll();
+		show(2)
+	} else if (window.innerWidth <= 625) {
+		hideAll();
+		show(1);
+	} else {
+		show(4);
+	}
+	handleButton();
+}
+
+function noneFirst() {
+	var selection = select('.item');
+	for (var i = 0 ; i < selection.length; i++) {
+		if (getComputedStyle(selection[i]).display === 'inline-block') {
+			selection[i].style.display = 'none';
+			i = selection.length -1;
+		}
+	}
+}
+
+function noneLast() {
+	var selection = select('.item');
+	for (var i = selection.length - 1; i > -1; i--) {
+		if (getComputedStyle(selection[i]).display === 'inline-block') {
+			selection[i].style.display = 'none';
+			i = 0;
+		}
+	}
+}
+
+function inlineBlockFirst() {
+	var selection = select('.item');
+	for (var i = 0 ; i < selection.length; i++) {
+		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] !== selection[0]) {
+			selection[i-1].style.display = 'inline-block';
+			i = selection.length - 1;
+		}
+	}
+}
+
+function inlineBlockLast() {
+	var selection = select('.item');
+	for (var i = selection.length - 1 ; i > -1 ; i--) {
+		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] !==
+				selection[selection.length - 1]) {
+			selection[i+1].style.display = 'inline-block';
+			i = 0;
+		} 
+	}
+}
+function handleButton() {
+	var selection = select('.item');
+	var selButLeft = select('.button_left');
+	if (selection[0].style.display === 'inline-block') {
+		selButLeft[0].style.visibility = 'hidden';
+	} else {
+		selButLeft[0].style.visibility = 'visible';
+	}
+	
+}
+init();
+window.onresize = function () {
+	init();
+	handleButton();
+}
+
+var selButRight = select('.button_right');
+var selButRight = selButRight[0];
+selButRight.onclick = function () {
+	handleMargin();
+	handleButton();
+	noneFirst();
+	inlineBlockLast();
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function deleteFirst(container,item) {
+// 	var selContainer = select(container);
+// 	var selItem = select(item);
+// 	selContainer = selContainer[0];
+// 	selItem = selItem[0];
+// 	selContainer.removeChild(selItem);
+// }
+// function deleteLast(container,item) {
+// 	var selContainer = select(container);
+// 	var selItem = select(item);
+// 	selContainer = selContainer[0];
+// 	for (var i = selItem.length-1; i > -1; i--) {
+// 		if(getComputedStyle(selItem[i]).display === 'inline-block'){
+// 			selContainer.removeChild(selItem[i]);
+// 			i = 0;
+// 		}
+// 	}
+// }
+// function lastImageSrc(container,item) {
+// 	var selContainer = select(container);
+// 	var selItem = select(item);
+// 	selContainer = selContainer[0];
+// 	for (var i = selItem.length-1; i > -1; i--) {
+// 		if(getComputedStyle(selItem[i]).display === 'inline-block'){
+// 			var childs = selItem[i].childNodes;
+// 			console.log(childs);
+// 			for (var o = 0; o < childs.length; o++) {
+// 				console.log(childs[o].className);
+// 				console.log(childs[o].nextSibling.nodeName);
+// 				if (childs[o].className === 'img_container' && childs[o].firstChild.nodeName === 'IMG') {
+// 					var src = childs[o].firstChild.getAttribute('src');
+// 					for (var p = 1; p < 11; p++) {
+// 						if (src.indexOf(p) !== -1) {
+// 							return p;
+// 						}
+// 					}
+					
+// 					o = childs.length-1;
+// 				}
+// 			}
+
+// 			i = 0;
+// 		}
+// 	}
+	
+// }
+
+// // deleteLast('#item_carousel_container','.item');
+// function createItem(categorie,srcNumber,price,name,view) {
+// 	var itemBigContainer = document.createElement('div');
+// 	itemBigContainer.className = 'item';
+
+// 	var categorieContainer = document.createElement('div');
+// 	categorieContainer.className = 'categorie';
+// 	categorieContainer.innerHTML = categorie;
+
+// 	var imgContainer = document.createElement('div');
+// 	imgContainer.className = 'img_container';
+// 	var img = document.createElement('img');
+// 	img.className = 'carousel_image';
+// 	img.setAttribute('src','carousel_image/'+srcNumber+'.jpg');
+// 	imgContainer.appendChild(img);
+
+// 	var priceContainer = document.createElement('div');
+// 	priceContainer.className = 'price';
+// 	priceContainer.innerHTML = price;
+
+// 	var nameContainer = document.createElement('div');
+// 	nameContainer.className = 'name_carousel';
+// 	nameContainer.innerHTML = name;
+
+// 	var viewContainer = document.createElement('div');
+// 	viewContainer.className = 'view';
+// 	viewContainer.innerHTML = view;
+
+// 	itemBigContainer.appendChild(categorieContainer);
+// 	itemBigContainer.appendChild(imgContainer);
+// 	itemBigContainer.appendChild(priceContainer); 
+// 	itemBigContainer.appendChild(nameContainer);
+// 	itemBigContainer.appendChild(viewContainer);
+//   return itemBigContainer;
+// }
+
+// function next() {
+	
+// 	var selItem = select('.item');
+// 	var src = lastImageSrc('#item_carousel_container','.item');
+// 	alert(src);
+// 	 if (src > 3) {
+// 		var item = createItem('Alimentation',src+1,'8000','Abdou Sarr',src+1);
+// 		deleteFirst('#item_carousel_container','.item');
+// 		// item.style.display = 'inline-block';
+// 		var selContainer = select('#item_carousel_container');
+// 		selContainer = selContainer[0];
+// 		console.log(item);
+// 		selContainer.appendChild(item);
+// 	 } else {
+// 	 	deleteFirst('#item_carousel_container','.item');
+// 	 	var itemOnDom = select('.item');
+// 	 	var kk;
+// 	 	for (var i = itemOnDom.length - 1; i > -1; i--) {
+// 	 		if (getComputedStyle(itemOnDom[i]).display === 'inline-block') {
+// 	 			kk = itemOnDom[i+1];
+// 	 			i = 0;
+// 	 		}	 
+// 	 	}
+// 	 	kk.style.display = 'inline-block';
+// 	 }
+// 	// if (src < 5) {
+// 	// 	deleteFirst('#item_carousel_container','.item');
+
+// 	// 	for (var i = selItem.length-1; i > -1; i--) {
+// 	// 		if(getComputedStyle(selItem[i]).display === 'inline-block'){
+// 	// 			selItem[i+1].style.display = 'inline-block';
+// 	// 			i = 0;
+// 	// 		}
+// 	// 	}
+
+// 	// }	
+// }
 
 
 
 </script>
 
 
-</script>	
+
 
 </body>
 
