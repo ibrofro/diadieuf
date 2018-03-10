@@ -8,7 +8,6 @@
 <div id="o">I'm a id element</div>
 <div id="carousel">
 
-<<<<<<< HEAD
 	<div class="button button_left">
 	<img class="arrow_image_left" src="icon/right.png" >
 	</div>
@@ -112,14 +111,6 @@
 	<div class="round_button round_button_9"></div>
 	<div class="round_button round_button_10"></div>						
 	</div>
-=======
-<div id="container">
-<div class="p">I'm a class element.</div>
-<div class="p">I'm a class element.</div>
-<div class="p">I'm a class element.</div>
-<img src="carousel_image/2.jpg" class="im">
-
->>>>>>> 92f3746c3c5e5a9eff4b6a86840b27d885072519
 </div>
 
 <script type="text/javascript" src="my_functions.js"></script>
@@ -128,7 +119,6 @@
 function handleMargin() {
 	// This function handle the margins between items if the container hide or show elements.
 	var selection = select('.item');
-	// var number = 0;
 	for (var i = selection.length - 1; i > -1; i--) {
 		if (getComputedStyle(selection[i]).display === 'inline-block') {
 			selection[i].style.marginRight = 0+'px';
@@ -275,6 +265,8 @@ window.onresize = function () {
 	handleButton();
 	handleMargin();
 }
+
+
 
 var selButRight = select('.button_right');
 var selButLeft = select('.button_left');
