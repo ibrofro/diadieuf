@@ -41,16 +41,16 @@
 	<div class="categorie">Informatique</div>	
 	<div class="img_container"><img class="carousel_image" src="carousel_image/4.jpg"></div>
 	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Monsieur Faye</div>
-	<div class="view">245 vues</div>
+	<div class="name_carousel">Abdourahmane Mané</div>
+	<div class="view">278454 vues</div>
 	</div>
 
 	<div class="item item_5">
-	<div class="categorie">Informatique</div>	
+	<div class="categorie">Jouets</div>	
 	<div class="img_container"><img class="carousel_image" src="carousel_image/5.jpg"></div>
-	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Monsieur Faye</div>
-	<div class="view">245 vues</div>
+	<div class="price">50.000 Cfa</div>
+	<div class="name_carousel">MSalif Sarr</div>
+	<div class="view">586 vues</div>
 	</div>
 
 	<div class="item item_6">
@@ -65,20 +65,20 @@
 	<div class="categorie">Informatique</div>	
 	<div class="img_container"><img class="carousel_image" src="carousel_image/7.jpg"></div>
 	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Monsieur Faye</div>
+	<div class="name_carousel">Laye Sidibé</div>
 	<div class="view">245 vues</div>
 	</div>
 
 	<div class="item item_8">
-	<div class="categorie">Informatique</div>	
+	<div class="categorie">Automobile</div>	
 	<div class="img_container"><img class="carousel_image" src="carousel_image/8.jpg"></div>
 	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Monsieur Faye</div>
+	<div class="name_carousel">Ibrahima Kanté</div>
 	<div class="view">245 vues</div>
 	</div>
 
 	<div class="item item_9">
-	<div class="categorie">Informatique</div>	
+	<div class="categorie">Immobilier</div>	
 	<div class="img_container"><img class="carousel_image" src="carousel_image/9.jpg"></div>
 	<div class="price">250.000 Cfa</div>
 	<div class="name_carousel">Monsieur Faye</div>
@@ -119,24 +119,18 @@
 function handleMargin() {
 	// This function handle the margins between items if the container hide or show elements.
 	var selection = select('.item');
-	var number = 0;
-	for (var i = 0; i < selection.length; i++) {
+	// var number = 0;
+	for (var i = selection.length - 1; i > -1; i--) {
 		if (getComputedStyle(selection[i]).display === 'inline-block') {
-			number++;
+			selection[i].style.marginRight = 0+'px';
+			if (selection[i-1]) {
+			selection[i-1].style.marginRight = 18+'px';
+			}
+			i = 0;
 		} 
+		
 	}
-	for (var i = number - 2; i > -1; i--) {
-			
-				selection[i].style.marginRight = '18px';
-				selection[i].style.color = 'red';
 
-				
-		}
-		// Put margin-right 0 for the last item on the container.
-	// for (var i = number - 1; i > -1; i--) {
-	// 			selection[i].style.marginRight = 0+'px';
-	// }
-// alert(number);
 
 }
 
@@ -150,7 +144,7 @@ function show(number) {
 	} else {
 		err('Unvalid parameter');
 	}
-	handleMargin();
+
 }
 
 function hideAll() {
@@ -159,21 +153,24 @@ function hideAll() {
 			selection[i].style.display = 'none';
 		}
 }
+
 function init() {
 	//This function gonna display the correct number of items on the carousel.
 	if (window.innerWidth <= 1025 && window.innerWidth > 835) {
 		hideAll();
 		show(3);
-	} else if (window.innerWidth <= 835 && window.innerWidth> 625) {
+	} else if (window.innerWidth <= 835 && window.innerWidth > 625) {
 		hideAll();
 		show(2)
 	} else if (window.innerWidth <= 625) {
 		hideAll();
 		show(1);
-	} else {
+	} else { 
+		hideAll();
 		show(4);
 	}
 	handleButton();
+	handleMargin();
 }
 
 function noneFirst() {
@@ -216,30 +213,86 @@ function inlineBlockLast() {
 		} 
 	}
 }
+
 function handleButton() {
 	var selection = select('.item');
+	//-------For Left Button----------------
 	var selButLeft = select('.button_left');
 	if (selection[0].style.display === 'inline-block') {
 		selButLeft[0].style.visibility = 'hidden';
 	} else {
 		selButLeft[0].style.visibility = 'visible';
 	}
-	
+	//-------For Right Button----------------
+	var selButRight = select('.button_right');
+	if (selection[selection.length - 1].style.display === 'inline-block') {
+		selButRight[0].style.visibility = 'hidden';
+	} else {
+		selButRight[0].style.visibility = 'visible';
+	}
 }
+
+function nextExist() {
+	var selection = select('.item');
+	var sel = select('.item');
+	var lastItem = sel.pop();
+	for (var i = selection.length - 1; i > -1; i--) {
+		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] === lastItem) {
+			return false;
+		} else {
+			return true;;
+
+		}
+	}
+}
+
+function previousExist() {
+	var selection = select('.item');
+	var sel = select('.item');
+	var firstItem = sel.shift();
+	for (var i = 0; i < selection.length; i++) {
+		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] === firstItem) {
+			return false;
+		} else {
+			return true;;
+
+		}
+	}
+}
+
 init();
 window.onresize = function () {
 	init();
 	handleButton();
+	handleMargin();
 }
 
 var selButRight = select('.button_right');
-var selButRight = selButRight[0];
+var selButLeft = select('.button_left');
+selButRight = selButRight[0];
+selButLeft = selButLeft[0];
+function next() {
+	if (nextExist()) {
+		inlineBlockLast();
+		noneFirst();
+		handleMargin();
+		handleButton();
+	}
+}
+function previous() {
+	if (previousExist()) {
+		inlineBlockFirst();
+		noneLast();
+		handleMargin();
+		handleButton();
+	}
+}
 selButRight.onclick = function () {
-	handleMargin();
-	handleButton();
-	noneFirst();
-	inlineBlockLast();
+	next();
 };
+selButLeft.onclick = function () {
+	previous();
+}
 
 
 
@@ -247,13 +300,7 @@ selButRight.onclick = function () {
 
 
 
-
-
-
-
-
-
-
+// setTimeout(alert('ffff'),10000);
 // function deleteFirst(container,item) {
 // 	var selContainer = select(container);
 // 	var selItem = select(item);
