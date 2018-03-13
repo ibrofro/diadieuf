@@ -119,17 +119,36 @@
 function handleMargin() {
 	// This function handle the margins between items if the container hide or show elements.
 	var selection = select('.item');
+	var lastInlineBlock;
 	for (var i = selection.length - 1; i > -1; i--) {
 		if (getComputedStyle(selection[i]).display === 'inline-block') {
 			selection[i].style.marginRight = 0+'px';
-			if (selection[i-1]) {
-			selection[i-1].style.marginRight = 18+'px';
-			}
+			lastInlineBlock = selection[i];
+			 if (selection[i-1]) {
+			 selection[i-1].style.marginRight = 18+'px';
+			 }
+			
 			i = 0;
 		} 
 		
 	}
-
+	for (var o = selection.length - 1; o >= 0; o--) {
+		if (getComputedStyle(selection[0]).display === 'inline-block' && selection[o] !== lastInlineBlock) {
+			selection[o].style.marginRight = 18 + 'px';
+		}
+				
+	}
+	// var selInlineBlock = [];
+	// for (var i = selection.length - 1; i > -1; i--) {
+	// 	if (getComputedStyle(selection[i]).display === 'inline-block') {
+	// 		selInlineBlock.push(selection[i]);
+	// 	}
+	// }
+	// var last = selInlineBlock.pop();
+	// last.style.marginRight = 0+'px';
+	// for (var i = 0; i < selInlineBlock.length; i++) {
+	// 	selInlineBlock[i].style.marginRight = 18+'px';
+	// }
 
 }
 
