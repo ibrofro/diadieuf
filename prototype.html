@@ -115,42 +115,64 @@
 
 <script type="text/javascript" src="my_functions.js"></script>
 <script type="text/javascript">
-
-function handleMargin() {
-	// This function handle the margins between items if the container hide or show elements.
-	var selection = select('.item');
-	var lastInlineBlock;
-	for (var i = selection.length - 1; i > -1; i--) {
-		if (getComputedStyle(selection[i]).display === 'inline-block') {
-			selection[i].style.marginRight = 0+'px';
-			lastInlineBlock = selection[i];
-			 if (selection[i-1]) {
-			 selection[i-1].style.marginRight = 18+'px';
-			 }
-			
-			i = 0;
-		} 
-		
-	}
+var carousel = {
+	handleMargin: function () {
+		var selection = select('.item');
+		var lastInlineBlock;
+		for (var i = selection.length - 1; i > -1; i--) {
+			if (getComputedStyle(selection[i]).display === 'inline-block') {
+				selection[i].style.marginRight = 0+'px';
+				lastInlineBlock = selection[i];
+			 	if (selection[i-1]) {
+			 		selection[i-1].style.marginRight = 18+'px';
+			 	}
+				i = 0;
+			}	 
+		}
 	for (var o = selection.length - 1; o >= 0; o--) {
 		if (getComputedStyle(selection[0]).display === 'inline-block' && selection[o] !== lastInlineBlock) {
 			selection[o].style.marginRight = 18 + 'px';
-		}
-				
+		}			
 	}
-	// var selInlineBlock = [];
-	// for (var i = selection.length - 1; i > -1; i--) {
-	// 	if (getComputedStyle(selection[i]).display === 'inline-block') {
-	// 		selInlineBlock.push(selection[i]);
-	// 	}
-	// }
-	// var last = selInlineBlock.pop();
-	// last.style.marginRight = 0+'px';
-	// for (var i = 0; i < selInlineBlock.length; i++) {
-	// 	selInlineBlock[i].style.marginRight = 18+'px';
-	// }
+}
+
 
 }
+// function handleMargin() {
+// 	// This function handle the margins between items if the container hide or show elements.
+// 	var selection = select('.item');
+// 	var lastInlineBlock;
+// 	for (var i = selection.length - 1; i > -1; i--) {
+// 		if (getComputedStyle(selection[i]).display === 'inline-block') {
+// 			selection[i].style.marginRight = 0+'px';
+// 			lastInlineBlock = selection[i];
+// 			 if (selection[i-1]) {
+// 			 selection[i-1].style.marginRight = 18+'px';
+// 			 }
+			
+// 			i = 0;
+// 		} 
+		
+// 	}
+// 	for (var o = selection.length - 1; o >= 0; o--) {
+// 		if (getComputedStyle(selection[0]).display === 'inline-block' && selection[o] !== lastInlineBlock) {
+// 			selection[o].style.marginRight = 18 + 'px';
+// 		}
+				
+// 	}
+// 	// var selInlineBlock = [];
+// 	// for (var i = selection.length - 1; i > -1; i--) {
+// 	// 	if (getComputedStyle(selection[i]).display === 'inline-block') {
+// 	// 		selInlineBlock.push(selection[i]);
+// 	// 	}
+// 	// }
+// 	// var last = selInlineBlock.pop();
+// 	// last.style.marginRight = 0+'px';
+// 	// for (var i = 0; i < selInlineBlock.length; i++) {
+// 	// 	selInlineBlock[i].style.marginRight = 18+'px';
+// 	// }
+
+// }
 
 function show(number) {
 	if (typeof(number) === 'number' && number < 11 && number > 0) {
@@ -188,7 +210,7 @@ function init() {
 		show(4);
 	}
 	handleButton();
-	handleMargin();
+	carousel.handleMargin();
 }
 
 function noneFirst() {
@@ -282,7 +304,7 @@ init();
 window.onresize = function () {
 	init();
 	handleButton();
-	handleMargin();
+	carousel.handleMargin();
 }
 
 
@@ -295,7 +317,7 @@ function next() {
 	if (nextExist()) {
 		inlineBlockLast();
 		noneFirst();
-		handleMargin();
+		carousel.handleMargin();
 		handleButton();
 	}
 }
@@ -303,7 +325,7 @@ function previous() {
 	if (previousExist()) {
 		inlineBlockFirst();
 		noneLast();
-		handleMargin();
+		carousel.handleMargin();
 		handleButton();
 	}
 }
