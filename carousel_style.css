@@ -1,6 +1,7 @@
 #carousel
 {
-	width:1000px;
+	width:1015px;
+	min-width: 332px;
 	margin:auto;
 	/* border: 1px solid black; */
 	color: #545454;
@@ -16,11 +17,9 @@
 	background-color: white;
 	border-radius:4px;
 	box-shadow: 0px 1px 4px 0px rgba(110, 110, 110, 0.35);
-	display: inline-block;
+	display: none;
 	vertical-align: middle;
 	margin-right: 18px;
-
-
 }
 .item .price,.name_carousel,.view
 {
@@ -111,6 +110,7 @@
 .button_left
 {
 	margin-right: 12px;
+	margin-left: 0;
 }
 .round_container
 {
@@ -118,6 +118,7 @@
 	margin: auto;
 	text-align: center;
 	margin-top: 18px;
+	display: none;
 	/*position: relative;This propertiehave to change to initial if the right button is cliqued
 	right: 10px;/*This propertie have to change to initial if the right button is cliqued*/
 }
@@ -143,4 +144,74 @@
 .round_button_9,.round_button_10
 {
 	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (max-width: 1025px) 
+{
+	/*.item:last-child
+	{
+		display: none;
+	}*/
+	#carousel
+	{
+		width: 100%;
+	}
+	.round_button_4
+	{
+		display: inline-block;
+	}
+}
+
+/*@media all and (max-width: 835px) 
+{
+	.item:nth-child(3)
+	{
+		display: none;
+		background-color: red;
+	}
+	.round_button_5
+	{
+		display: inline-block;
+	}
+
+}
+@media all and (max-width: 625px) 
+{
+	.item:nth-child(2)
+	{
+		display: none;
+	}
+	.item
+	{
+		margin-right: 0;
+	}
+	.round_button_6,.round_button_7,.round_button_8,.round_button_9,
+	.round_button_10
+	{
+		display: inline-block;
+	}
+}*/
+
+@media screen and (max-width: 340px) 
+{
+.button_left
+{
+	margin-right: 0;
+}
+.button_right
+{
+	margin-left: 0;
+}
 }
