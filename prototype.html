@@ -115,6 +115,13 @@
 
 <script type="text/javascript" src="my_functions.js"></script>
 <script type="text/javascript">
+	// function gg() {
+	// 	selection[i].style.opacity = 1;
+	// }
+	// function pp(par){
+				
+	// 			setTimeout(" var par = arguments[0]; var selection = select('.item'); selection[par].style.opacity = 1;",2000);
+	// 		} 
 var carousel = {
 
 	handleMargin: function () {
@@ -144,7 +151,12 @@ var carousel = {
 	if (typeof(number) === 'number' && number < 11 && number > 0) {
 		var selection = select(".item");
 		for (var i = 0; i < number; i++) {
+			// transition: opacity 2s;
 			selection[i].style.display = 'inline-block';
+			// selection[i].style.opacity = 0;
+			// selection[i].style.transitionProperty = 'opacity';
+			// selection[i].style.transitionDuration = '2s';
+
 		}	
 	} else {
 		err('Unvalid parameter');
@@ -204,6 +216,7 @@ inlineBlockFirst: function() {
 	var selection = select('.item');
 	for (var i = 0 ; i < selection.length; i++) {
 		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] !== selection[0]) {
+			selection[i-1].style.opacity = 0;
 			selection[i-1].style.display = 'inline-block';
 			i = selection.length - 1;
 		}
@@ -215,6 +228,7 @@ inlineBlockLast: function() {
 	for (var i = selection.length - 1 ; i > -1 ; i--) {
 		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] !==
 				selection[selection.length - 1]) {
+			selection[i+1].style.opacity = 0;
 			selection[i+1].style.display = 'inline-block';
 			i = 0;
 		} 
@@ -282,6 +296,7 @@ selButLeft = selButLeft[0];
 function next() {
 	if (carousel.nextExist()) {
 		carousel.inlineBlockLast();
+		opacityLast();
 		carousel.noneFirst();
 		carousel.handleMargin();
 		carousel.handleButton();
@@ -290,6 +305,7 @@ function next() {
 function previous() {
 	if (carousel.previousExist()) {
 		carousel.inlineBlockFirst();
+		opacityFirst();
 		carousel.noneLast();
 		carousel.handleMargin();
 		carousel.handleButton();
@@ -301,7 +317,80 @@ selButRight.onclick = function () {
 selButLeft.onclick = function () {
 	previous();
 }
+
+function opacityLast() {
+	var selection = select('.item');
+	var lastItem;
+	for (var i = selection.length - 1; i > -1; i--) {
+		if (getComputedStyle(selection[i]).display === 'inline-block') {
+			lastItem = selection[i];
+			i = 0;
+		}
+		if (lastItem) {
+			function resetOpacity() {
+				lastItem.style.opacity = 1;
+			}
+			resetOpacity();
+		}
+	}
+}
+
+function opacityFirst() {
+	var selection = select('.item');
+	var firstItem;
+	for (var i = 0; i < selection.length; i++) {
+		if (getComputedStyle(selection[i]).display === 'inline-block') {
+			firstItem = selection[i];
+			i = selection.length - 1;
+		}
+		if (firstItem) {
+			function resetOpacity() {
+				firstItem.style.opacity = 1;
+			}
+			resetOpacity();
+		}
+	}
+}
+
 </script>
+
+<div class="p 1 2">fgsdfgsdfgsdf</div>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+<button id="button">Click Here.</button>
+<style type="text/css">
+	.0
+	{
+		color: red; 
+	}
+</style>
+
+
+<script type="text/javascript">
+	var selection = select('.0');
+	selection = selection[0];
+	console.log(selection.className);
+	var classes = selection.className.split(' ');
+	console.log(classes);
+	// the_but = the_but[0];
+
+	// var the_div = select('.div');
+	// the_div = the_div[0];
+	
+	// the_but.onclick = function () {
+
+	// 	the_div.style.opacity = 0;
+	// 	// the_div.style.opacity = 1;
+	// }
+	// var sel = select('.div');
+	
+	// sel[0].style.opacity = 1;
+// setTimeout((function () {
+// 	return alert('merde');
+// })(),1000);  
+</script>
+
 </body>
 
 </html>

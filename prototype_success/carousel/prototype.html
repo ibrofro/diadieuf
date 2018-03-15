@@ -1,3 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prototype</title>
+	<link rel="stylesheet" type="text/css" href="prototype.css">
+</head>
+<body>
+<div id="o">I'm a id element</div>
+<div id="carousel">
+
+	<div class="button button_left">
+	<img class="arrow_image_left" src="icon/right.png" >
+	</div>
+
+	<div id="item_carousel_container">
+	<div class="item item_1">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/1.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Abdou Fall</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_2">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/2.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Sidy Ndiaye</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_3">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class= "carousel_image" src="carousel_image/3.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Mouhamed Samb</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_4">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/4.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Abdourahmane Mané</div>
+	<div class="view">278454 vues</div>
+	</div>
+
+	<div class="item item_5">
+	<div class="categorie">Jouets</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/5.jpg"></div>
+	<div class="price">50.000 Cfa</div>
+	<div class="name_carousel">MSalif Sarr</div>
+	<div class="view">586 vues</div>
+	</div>
+
+	<div class="item item_6">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/6.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Monsieur Faye</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_7">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/7.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Laye Sidibé</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_8">
+	<div class="categorie">Automobile</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/8.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Ibrahima Kanté</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_9">
+	<div class="categorie">Immobilier</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/9.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Monsieur Faye</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	<div class="item item_10">
+	<div class="categorie">Informatique</div>	
+	<div class="img_container"><img class="carousel_image" src="carousel_image/10.jpg"></div>
+	<div class="price">250.000 Cfa</div>
+	<div class="name_carousel">Monsieur Faye</div>
+	<div class="view">245 vues</div>
+	</div>
+
+	</div>
+
+	<div class="button button_right">
+	<img class="arrow_image_right" src="icon/right.png" >
+	</div>
+
+	<div class="round_container">
+	<div class="round_button round_button_1"></div>	
+	<div class="round_button round_button_2"></div>	
+	<div class="round_button round_button_3"></div>
+	<div class="round_button round_button_4"></div>
+	<div class="round_button round_button_5"></div>	
+	<div class="round_button round_button_6"></div>	
+	<div class="round_button round_button_7"></div>
+	<div class="round_button round_button_8"></div>
+	<div class="round_button round_button_9"></div>
+	<div class="round_button round_button_10"></div>						
+	</div>
+</div>
+
+<script type="text/javascript" src="my_functions.js"></script>
+<script type="text/javascript">
 var carousel = {
 
 	handleMargin: function () {
@@ -87,7 +204,6 @@ inlineBlockFirst: function() {
 	var selection = select('.item');
 	for (var i = 0 ; i < selection.length; i++) {
 		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] !== selection[0]) {
-			selection[i-1].style.opacity = 0;
 			selection[i-1].style.display = 'inline-block';
 			i = selection.length - 1;
 		}
@@ -99,44 +215,9 @@ inlineBlockLast: function() {
 	for (var i = selection.length - 1 ; i > -1 ; i--) {
 		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] !==
 				selection[selection.length - 1]) {
-			selection[i+1].style.opacity = 0;
 			selection[i+1].style.display = 'inline-block';
 			i = 0;
 		} 
-	}
-},
-
-opacityFirst: function() {
-	var selection = select('.item');
-	var firstItem;
-	for (var i = 0; i < selection.length; i++) {
-		if (getComputedStyle(selection[i]).display === 'inline-block') {
-			firstItem = selection[i];
-			i = selection.length - 1;
-		}
-		if (firstItem) {
-			function resetOpacity() {
-				firstItem.style.opacity = 1;
-			}
-			resetOpacity();
-		}
-	}
-},
-
-opacityLast: function() {
-	var selection = select('.item');
-	var lastItem;
-	for (var i = selection.length - 1; i > -1; i--) {
-		if (getComputedStyle(selection[i]).display === 'inline-block') {
-			lastItem = selection[i];
-			i = 0;
-		}
-		if (lastItem) {
-			function resetOpacity() {
-				lastItem.style.opacity = 1;
-			}
-			resetOpacity();
-		}
 	}
 },
 
@@ -155,7 +236,6 @@ init: function() {
 		carousel.hideAll();
 		carousel.show(4);
 	}
-	carousel.lastNumber();
 	carousel.handleButton();
 	carousel.handleMargin();
 },
@@ -186,38 +266,15 @@ previousExist: function() {
 
 		}
 	}
-},
-
-lastNumber: function() {
-	var selection = select('.item');
-	console.log(selection);
-	var info;
-	for (var i = selection.length - 1; i > -1; i--) {
-		 if (window.getComputedStyle(selection[i]).display === 'inline-block') {
-			var classs = selection[i].className;
-			var classses = classs.split(' ');
-			console.log(selection[i]);
-			for (var i = 0; i < classses.length; i++) {
-			 	if(parseInt(classses[i]) !== NaN) {
-			 		info = classses[i];
-			 	}
-			}
-			i=0;	 
-		}	
-	}		
-	var selSpan = select('#number');
-	selSpan = selSpan[0];
-	selSpan.innerHTML = info;	
 }
 
 } //The end of the Namespace 'carousel'
 carousel.init();
-window.addEventListener('resize',function(){
+window.onresize = function () {
 	carousel.init();
-	carousel.lastNumber();
 	carousel.handleButton();
 	carousel.handleMargin();
-},false);
+}
 var selButRight = select('.button_right');
 var selButLeft = select('.button_left');
 selButRight = selButRight[0];
@@ -225,9 +282,7 @@ selButLeft = selButLeft[0];
 function next() {
 	if (carousel.nextExist()) {
 		carousel.inlineBlockLast();
-		carousel.opacityLast();
 		carousel.noneFirst();
-		carousel.lastNumber();
 		carousel.handleMargin();
 		carousel.handleButton();
 	}
@@ -235,60 +290,18 @@ function next() {
 function previous() {
 	if (carousel.previousExist()) {
 		carousel.inlineBlockFirst();
-		carousel.opacityFirst();
 		carousel.noneLast();
-		carousel.lastNumber();
 		carousel.handleMargin();
 		carousel.handleButton();
 	}
 }
-// function lastNumber() {
-// 	var selection = select('.item');
-// 	console.log(selection);
-// 	var info;
-// 	for (var i = selection.length - 1; i > -1; i--) {
-// 		 if (window.getComputedStyle(selection[i]).display === 'inline-block') {
-// 			var classs = selection[i].className;
-// 			var classses = classs.split(' ');
-// 			console.log(selection[i]);
-// 			for (var i = 0; i < classses.length; i++) {
-// 			 	if(parseInt(classses[i]) !== NaN) {
-// 			 		info = classses[i];
-// 			 	}
-// 			}
-// 			i=0;	 
-// 		}	
-// 	}		
-// 	var selSpan = select('#number');
-// 	selSpan = selSpan[0];
-// 	selSpan.innerHTML = info;	
-// }
-
-// function firstNumber() {
-// 	var selection = select('.item');
-// 	console.log(selection);
-// 	var info;
-// 	for (var i = 0; i < selection.length; i++) {
-// 		 if (window.getComputedStyle(selection[i]).display === 'inline-block') {
-// 			var classs = selection[i].className;
-// 			var classses = classs.split(' ');
-// 			console.log(selection[i]);
-// 			for (var i = 0; i < classses.length; i++) {
-// 			 	if(parseInt(classses[i]) !== NaN) {
-// 			 		info = classses[i];
-// 			 	}
-// 			}
-// 			i = selection.length - 1;	 
-// 		}	
-// 	}		
-// 	var selSpan = select('#number');
-// 	selSpan = selSpan[0];
-// 	selSpan.innerHTML = info;	
-// }
-
 selButRight.onclick = function () {
 	next();
 };
 selButLeft.onclick = function () {
 	previous();
 }
+</script>
+</body>
+
+</html>

@@ -20,7 +20,7 @@
 	display: none;
 	vertical-align: middle;
 	margin-right: 18px;
-	transition: opacity 0.2s;
+
 
 }
 .item .price,.name_carousel,.view
@@ -216,13 +216,4 @@
 {
 	margin-left: 0;
 }
-}
-.div 
-{
-	border:1px solid black;
-	width: 100px;
-	height: 100px;
-	opacity: 0;
-  transition: opacity 1s;
-	margin-bottom: 2px: 
 }
