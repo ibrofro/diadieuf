@@ -1,267 +1,31 @@
 @font-face
 {
 	font-family: 'brandon_medium';
-	src:url('font/Brandon Grotesque Medium.otf');
+	src:url('font/Brandon Grotesque Medium.woff');
 	
 }
 @font-face
 {
-	font-family: 'brandon_bold';
-	src:url('font/Brandon Grotesque Bold.otf');
+	font-family: 'brandon_regular';
+	src:url('font/Brandon Grotesque Regular.woff');
 	
 }
 @font-face
 {
-	font-family: 'brandon_black';
-	src:url('font/Brandon Grotesque Black.otf');
+	font-family: 'brandon_black_italic';
+	src:url('font/Brandon Grotesque Black Italic.woff');
 	
 }
 body
 {
 	font-family: 'brandon_medium';
 	background-color:#f4f4f4;
-	color: #efeeee;
+	color: #545454;
 	margin:0;
 }
-
-header
+input
 {
-	height: 50px;
-	background-color:white;
-  	box-shadow: 0px 1px 0.99px 0.01px rgba(110, 110, 110, 0.35); 	
+	font-family: 'brandon_regular';
+	font-size:17px;
 }
 
-header div
-{
-	display: inline-block;
-	float: right;
-	margin: 10px;
-	font-style: normal;
-}
-header div a 
-{
-text-decoration: none;
-color:#636161;
-}
-.profil a 
-{
-	color:#317399;
-	
-}
-header .profil
-{
-	padding: 0px 15px 0px 15px;
-	box-sizing: border-box;
-	border:1px solid #317399;
-	border-radius: 2px;
-	box-shadow: 0px 1px 0.99px 0.01px rgba(0, 0, 0, 0.35);
-	cursor: pointer;
-  	-webkit-user-select: none;  /* Chrome all / Safari all */
-  	-moz-user-select: none;     /* Firefox all */
-  	-ms-user-select: none;      /* IE 10+ */
-  	user-select: none;          /* Likely future */      
-	
-	
-}
-
-.message img,.notification img /*Replace the icons (message,notification)*/
-{
-	
-	display: inline-block;
-	vertical-align: middle;
-}
-.message_count,.notification_count
-{
-	border-radius: 4px;
-	font-size: 12px;
-	font-family: 'brandon_bold';
-	font-weight: bolder;
-	background-color: red;
-	color:white;
-	padding: 1px 4px;
-	height: 16px;
-	display: inline-block;
-	position: relative;
-	bottom: 5px;
-	right: 7px;
-}
-.message,.notification
-{
-	margin: 10px 0 10px 0;
-}
-.notification
-{
-	margin-left: 10px;
-}
-.retrouver
-{
-	text-align: center;
-	font-size: 13px;
-	line-height: 16px;
-	margin-top: 3px;
-}
-.arrow_black
-{
-	display: block;
-}
-.publier
-{
-	margin: 8px;
-	border-radius: 2px;
-	background-color: #317399;
-  	box-shadow: 0px 1px 0.99px 0.01px rgba(0, 0, 0, 0.35);
- 
-
-}
-.publier a 
-{
-	color:#ffffff;
-	padding: 4px 9px;
-	display: block;
-}
-
-.clear 
-{
-	clear: both;
-}
-
-.header_sub_menu
-{
-	float: right;
-}
-
-.sub_profil
-{
-	border-radius: 2px;
-	background-color: white;
-	width: 200px;
-	text-align: center;
-	padding: 20px 0 20px 0;
-	float: right;
-	box-shadow: 0px 1px 0.99px 0.01px rgba(0, 0, 0, 0.35);
-	display: none;
-	
-
-}
-
-.abonne,.follower
-{
-	display: inline-block;
-	width: 80px;
-
-	
-}
-.profil_separator
- {
- 	width: 100px;
- 	margin: auto;
- 	opacity: 0.5;
- 	margin: 10px auto 10px auto;
- }
- .sub_profil a
- {
- 	text-decoration: none;
- 	color:#317399;
-
- }
- a.modifier_profil_link,a.deconnection_link
- {
- 	text-decoration: underline;
- }
- a.abonne_text,a.follower_text
- {
- 	color:#636161;
- }
- a.abonne_count,a.follower_count
- {
- 	font-family: 'brandon_black';
- 	font-size: 18px;
- }
-
- .sub_received_message
-{
-	border-radius: 2px;
-	background-color: white;
-	width: 400px;
-	height: 300px;
-	overflow: scroll;
-	text-align: center;
-	padding: 20px 0 20px 0;
-	float: right;
-	box-shadow: 0px 1px 0.99px 0.01px rgba(0, 0, 0, 0.35);
-	color:#636161;
-	display: none;
-}
-.message_container:hover,notification_container:hover
-{
-background-color:#f4f4f4 ;
-
-}
-.notification_container:hover
-{
-background-color:#f4f4f4 ;
-
-}
-.sender,.date
-{
-	width:100px;
-	display: inline-block;
-
-
- }
- .message_container
- {
- 	
- 	border-radius: 2px;
- 	margin:10px 10px;
- 	padding: 5px; 
-  	box-shadow: 0px 0px 2.91px 0.09px rgba(0, 0, 0, 0.35);
-  
-
-
-
- }
- .sender
- {
- 	float: left;
- 	text-align: left;
- 	padding-left: 5px;
- }
- .date
- {
- 	float: right;
- 	
- }
- .contenu
- {
- 	text-align:left;
- 	padding-left: 5px;
- }
-
-
-.sub_notification{
-    
-    border-radius: 2px;
-    background-color: white;
-    width: 354px;
-    height: 300px;
-    overflow: scroll;
-    text-align: center;
-    padding: 20px 0 20px 0;
-    float: right;
-    box-shadow: 0px 1px 0.99px 0.01px rgba(0, 0, 0, 0.35);
-    color:#636161;
-    display: none; 
-}
-
-.notification_container {
-    border-radius: 2px;
-    margin:10px 10px;
-    padding: 5px;
-    box-shadow: 0px 0px 2.91px 0.09px rgba(0, 0, 0, 0.35);
-}
-
-.date_time {
-    font-size: 13px;
-    font-family: brandon_bold;
-}

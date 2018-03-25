@@ -3,10 +3,15 @@
 <head>
 	<title>Diadieuf</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="header_style.css">
 	<link rel="stylesheet" type="text/css" href="header_responsive_style.css">
 	<link rel="stylesheet" type="text/css" href="carousel_style.css">
 	<link rel="stylesheet" type="text/css" href="carousel_responsive_style.css">
+	<link rel="stylesheet" type="text/css" href="search_style.css">
+	<link rel="stylesheet" type="text/css" href="search_responsive_style.css">
+	<link rel="stylesheet" type="text/css" href="categories_style.css">
+	<link rel="stylesheet" type="text/css" href="categories_responsive_style.css">
 	<meta charset="utf-8">
 </head>
 <body>
@@ -143,7 +148,7 @@
 	<div class="deconnection"></div><a href="" class="deconnection_link">Déconnexion</a></div>
 
 
-</div> <!-- This is the end of the header_sub_menu -->
+</div> <!-- end of the header_sub_menu -->
 <!-- ________________________________________CAROUSEL__________________________________________________ -->
 
 <div id="carousel">
@@ -244,22 +249,74 @@
 	<div id="item_infos"> / 10</div>
 	</div>
 
-	<div class="round_container">
-	<div class="round_button round_button_1"></div>	
-	<div class="round_button round_button_2"></div>	
-	<div class="round_button round_button_3"></div>
-	<div class="round_button round_button_4"></div>
-	<div class="round_button round_button_5"></div>	
-	<div class="round_button round_button_6"></div>	
-	<div class="round_button round_button_7"></div>
-	<div class="round_button round_button_8"></div>
-	<div class="round_button round_button_9"></div>
-	<div class="round_button round_button_10"></div>						
-	</div>
+</div> <!-- End of Carousel -->
+
+<!-- ________________________________________Search__________________________________________________ -->
+
+<div id="search">
+<div id="categories_button">Toutes les categories <img style="color: white" src="icon/arrow_white.png"></div>
+<form id="search_form">
+	<select style="display:none">
+	<option value="tous"></option></select>
+	<div id="search_bar"><input type="text" name=""></div><button id="submit_button" type="submit">Rechercher</button>
+</form>
+</div>
+
+<div id="categories_container">
+<div>
+<div class="tous categories_style">Toutes les categories</div>
+</div>
+
+<div class="group_container multimedia_container">
+<div class="multimedia categories_style">Multimedia</div>
+<div class="informatique sub_categories_style">Informatique</div>
+<div class="jeux sub_categories_style">Jeux/Console</div>
+<div class="image_et_son sub_categories_style">Image et Sons</div>
+<div class="telephonie sub_categories_style">Telephonie</div>
+</div>
+
+<div class="group_container immobilier_container">
+<div class="immobilier categories_style">Immobilier</div>
+<div class="ventes_immobilieres sub_categories_style">Ventes Immobilieres</div>
+<div class="location_collocation sub_categories_style">Locations/Colocations</div>
+<div class="bureau sub_categories_style">Bureau</div>
+<div class="boutique sub_categories_style">Boutique</div>
+</div>
+
+<div class="group_container autos_motos">
+<div class="auto_moto categories_style">Autos/Motos</div>
+<div class="voiture sub_categories_style">Voitures</div>
+<div class="Moto sub_categories_style">Motos</div>
+<div class="equipement_auto sub_categories_style">Equipements Autos</div>
+<div class="equipement_moto sub_categories_style">Equipements Motos</div>
+</div>
+
+<div class="group_container vetement">
+<div class="vetement categories_style">Vetements</div>
+<div class="homme sub_categories_style">Hommes</div>
+<div class="femmes sub_categories_style">Femmes</div>
+<div class="bebe sub_categories_style">Bebes</div>
+<div class="equipement_moto sub_categories_style">Equipements Motos</div>
+</div>
+
+<div class="group_container equipement_maison">
+<div class="vetement categories_style">Vetements</div>
+<div class="homme sub_categories_style">Hommes</div>
+<div class="femmes sub_categories_style">Femmes</div>
+<div class="bebe sub_categories_style">Bebes</div>
+<div class="equipement_moto sub_categories_style">Equipements Motos</div>
+</div>
+
+<div class="group_container vetement">
+<div class="vetement categories_style">Vetements</div>
+<div class="homme sub_categories_style">Hommes</div>
+<div class="femmes sub_categories_style">Femmes</div>
+<div class="bebe sub_categories_style">Bebes</div>
+<div class="equipement_moto sub_categories_style">Equipements Motos</div>
 </div>
 
 <script type="text/javascript" src="my_functions.js"></script>
-<script type="text/javascript" src="carousel.js"></script>
 <script type="text/javascript" src="header.js"></script>
+<script type="text/javascript" src="carousel.js"></script>
 </body>
 </html>
