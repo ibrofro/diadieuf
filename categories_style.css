@@ -1,13 +1,29 @@
+div.tous
+{
+	width: 180px;
+	margin-bottom: 0;	
+}
 #categories_container
 {
 	width: 780px;
-	height: 440px;
+	height: 427px;
 	background-color: white;
 	box-shadow: 0px 1px 0.99px 0.01px rgba(0, 0, 0, 0.35);
 	margin: auto;
 	border-radius: 2px;
 	text-align: center;
+	display: none;
 	margin-top: 20px; /*to be removed*/
+}
+div.close_categories
+{
+	position: relative;
+	left: 749px;
+	top: 12px;
+	/* margin-right: 4px; */
+	width: 18px;
+	height: 18px;
+	cursor: pointer;
 }
 .categories_style
 {
@@ -20,17 +36,25 @@
 	padding: 4px 9px;
 	cursor: pointer;
 	margin-top: 20px;
-
+	margin-bottom: 7px;
+	text-align: center;
+	width: 91%;
 }
 .group_container
 {
 	display: inline-block;
 	text-align: left;
 	margin: 0px 7px 0px 7px;
+	width: 200px;
+	/* border: 1px solid; */
 }
 .sub_categories_style
 {
 	font-family: 'brandon_regular';
+	cursor: pointer;
 
-
+}
+.group_container div:hover
+{
+	text-decoration: underline;
 }

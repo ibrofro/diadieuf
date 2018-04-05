@@ -163,7 +163,6 @@
 	close_sub_menu(sel_close_icon_tabs,sel_sub_menu_responsive);
 	close_sub_menu(sel_close_icon_sub_retrouver,sel_sub_retrouver);
 	close_sub_menu(sel_close_icon_sub_profil,sel_sub_profil);
-	console.log(sel_message);
-	console.log(sel_sub_received_message);
+
 	
 

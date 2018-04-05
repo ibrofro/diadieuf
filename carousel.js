@@ -147,7 +147,7 @@ init: function() {
 		carousel.show(3);
 	} else if (window.innerWidth <= 835 && window.innerWidth > 625) {
 		carousel.hideAll();
-		carousel.show(2)
+		carousel.show(2);
 	} else if (window.innerWidth <= 625) {
 		carousel.hideAll();
 		carousel.show(1);
@@ -168,7 +168,7 @@ nextExist: function() {
 		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] === lastItem) {
 			return false;
 		} else {
-			return true;;
+			return true;
 
 		}
 	}
@@ -182,7 +182,7 @@ previousExist: function() {
 		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] === firstItem) {
 			return false;
 		} else {
-			return true;;
+			return true;
 
 		}
 	}
@@ -190,13 +190,11 @@ previousExist: function() {
 
 lastNumber: function() {
 	var selection = select('.item');
-	console.log(selection);
 	var info;
 	for (var i = selection.length - 1; i > -1; i--) {
 		 if (window.getComputedStyle(selection[i]).display === 'inline-block') {
 			var classs = selection[i].className;
 			var classses = classs.split(' ');
-			console.log(selection[i]);
 			for (var i = 0; i < classses.length; i++) {
 			 	if(parseInt(classses[i]) !== NaN) {
 			 		info = classses[i];
@@ -210,7 +208,7 @@ lastNumber: function() {
 	selSpan.innerHTML = info;	
 }
 
-} //The end of the Namespace 'carousel'
+};//The end of the Namespace 'carousel'
 carousel.init();
 window.addEventListener('resize',function(){
 	carousel.init();
@@ -242,53 +240,9 @@ function previous() {
 		carousel.handleButton();
 	}
 }
-// function lastNumber() {
-// 	var selection = select('.item');
-// 	console.log(selection);
-// 	var info;
-// 	for (var i = selection.length - 1; i > -1; i--) {
-// 		 if (window.getComputedStyle(selection[i]).display === 'inline-block') {
-// 			var classs = selection[i].className;
-// 			var classses = classs.split(' ');
-// 			console.log(selection[i]);
-// 			for (var i = 0; i < classses.length; i++) {
-// 			 	if(parseInt(classses[i]) !== NaN) {
-// 			 		info = classses[i];
-// 			 	}
-// 			}
-// 			i=0;	 
-// 		}	
-// 	}		
-// 	var selSpan = select('#number');
-// 	selSpan = selSpan[0];
-// 	selSpan.innerHTML = info;	
-// }
-
-// function firstNumber() {
-// 	var selection = select('.item');
-// 	console.log(selection);
-// 	var info;
-// 	for (var i = 0; i < selection.length; i++) {
-// 		 if (window.getComputedStyle(selection[i]).display === 'inline-block') {
-// 			var classs = selection[i].className;
-// 			var classses = classs.split(' ');
-// 			console.log(selection[i]);
-// 			for (var i = 0; i < classses.length; i++) {
-// 			 	if(parseInt(classses[i]) !== NaN) {
-// 			 		info = classses[i];
-// 			 	}
-// 			}
-// 			i = selection.length - 1;	 
-// 		}	
-// 	}		
-// 	var selSpan = select('#number');
-// 	selSpan = selSpan[0];
-// 	selSpan.innerHTML = info;	
-// }
-
 selButRight.onclick = function () {
 	next();
 };
 selButLeft.onclick = function () {
 	previous();
-}
+};

@@ -5,400 +5,54 @@
 	<link rel="stylesheet" type="text/css" href="prototype.css">
 </head>
 <body>
-<div id="o">I'm a id element</div>
-<div id="carousel">
-
-	<div class="button button_left">
-	<img class="arrow_image_left" src="icon/right.png" >
-	</div>
-
-	<div id="item_carousel_container">
-	<div class="item item_1">
-	<div class="categorie">Informatique</div>	
-	<div class="img_container"><img class="carousel_image" src="carousel_image/1.jpg"></div>
-	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Abdou Fall</div>
-	<div class="view">245 vues</div>
-	</div>
-
-	<div class="item item_2">
-	<div class="categorie">Informatique</div>	
-	<div class="img_container"><img class="carousel_image" src="carousel_image/2.jpg"></div>
-	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Sidy Ndiaye</div>
-	<div class="view">245 vues</div>
-	</div>
-
-	<div class="item item_3">
-	<div class="categorie">Informatique</div>	
-	<div class="img_container"><img class= "carousel_image" src="carousel_image/3.jpg"></div>
-	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Mouhamed Samb</div>
-	<div class="view">245 vues</div>
-	</div>
-
-	<div class="item item_4">
-	<div class="categorie">Informatique</div>	
-	<div class="img_container"><img class="carousel_image" src="carousel_image/4.jpg"></div>
-	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Abdourahmane Mané</div>
-	<div class="view">278454 vues</div>
-	</div>
-
-	<div class="item item_5">
-	<div class="categorie">Jouets</div>	
-	<div class="img_container"><img class="carousel_image" src="carousel_image/5.jpg"></div>
-	<div class="price">50.000 Cfa</div>
-	<div class="name_carousel">MSalif Sarr</div>
-	<div class="view">586 vues</div>
-	</div>
-
-	<div class="item item_6">
-	<div class="categorie">Informatique</div>	
-	<div class="img_container"><img class="carousel_image" src="carousel_image/6.jpg"></div>
-	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Monsieur Faye</div>
-	<div class="view">245 vues</div>
-	</div>
-
-	<div class="item item_7">
-	<div class="categorie">Informatique</div>	
-	<div class="img_container"><img class="carousel_image" src="carousel_image/7.jpg"></div>
-	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Laye Sidibé</div>
-	<div class="view">245 vues</div>
-	</div>
-
-	<div class="item item_8">
-	<div class="categorie">Automobile</div>	
-	<div class="img_container"><img class="carousel_image" src="carousel_image/8.jpg"></div>
-	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Ibrahima Kanté</div>
-	<div class="view">245 vues</div>
-	</div>
-
-	<div class="item item_9">
-	<div class="categorie">Immobilier</div>	
-	<div class="img_container"><img class="carousel_image" src="carousel_image/9.jpg"></div>
-	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Monsieur Faye</div>
-	<div class="view">245 vues</div>
-	</div>
-
-	<div class="item item_10">
-	<div class="categorie">Informatique</div>	
-	<div class="img_container"><img class="carousel_image" src="carousel_image/10.jpg"></div>
-	<div class="price">250.000 Cfa</div>
-	<div class="name_carousel">Monsieur Faye</div>
-	<div class="view">245 vues</div>
-	</div>
-
-	</div>
-
-	<div class="button button_right">
-	<img class="arrow_image_right" src="icon/right.png" >
-	</div>
-
-	<div class="round_container">
-	<div class="round_button round_button_1"></div>	
-	<div class="round_button round_button_2"></div>	
-	<div class="round_button round_button_3"></div>
-	<div class="round_button round_button_4"></div>
-	<div class="round_button round_button_5"></div>	
-	<div class="round_button round_button_6"></div>	
-	<div class="round_button round_button_7"></div>
-	<div class="round_button round_button_8"></div>
-	<div class="round_button round_button_9"></div>
-	<div class="round_button round_button_10"></div>						
-	</div>
-</div>
-
+<div id="elem">
+<div class="child prefix">Child</div>
+<div class="child">Child</div>
+<div class="child">Child</div>
+<div class="child">Child</div>
+<div class="child">Child</div>
+<div class="child">Child</div>
+<div class="crazy">another Type</div>
+<div class="crazy">another Type</div>
+<div class="crazy">another Type</div>
+<div class="crazy">another Type</div>
 <script type="text/javascript" src="my_functions.js"></script>
-<script type="text/javascript">
-	// function gg() {
-	// 	selection[i].style.opacity = 1;
-	// }
-	// function pp(par){
-				
-	// 			setTimeout(" var par = arguments[0]; var selection = select('.item'); selection[par].style.opacity = 1;",2000);
-	// 		} 
-var carousel = {
+<script>
+// 	var selElem = select('#elem');
+// 	selElem = selElem[0].childNodes;
+// 	for (var i = 0; i < selElem.length; i++) {
+// 		if(selElem[i].nodeName === 'DIV'){
+// 			selElem[i].onclick = function () {
+// 				alert(this.innerText);
+// 			};
+// 		}
+// 	}
+// var selTest = select('.child');
+// selTest = selTest[0];
+// console.log(selTest.className);	
 
-	handleMargin: function () {
-		var selection = select('.item');
-		var lastInlineBlock;
-		for (var i = selection.length - 1; i > -1; i--) {
-			if (getComputedStyle(selection[i]).display === 'inline-block') {
-				selection[i].style.marginRight = 0+'px';
-				lastInlineBlock = selection[i];
-			 	if (selection[i-1]) {
-			 		selection[i-1].style.marginRight = 18+'px';
-			 	}
-				i = 0;
-			}	 
-		}
-	for (var o = selection.length - 1; o >= 0; o--) {
-		if (getComputedStyle(selection[0]).display === 'inline-block' && selection[o] !== lastInlineBlock) {
-			selection[o].style.marginRight = 18 + 'px';
-		}			
-	}
-},
 
-	/* show(number) is going to display inline-block items according to it's parameter  
-	 * it performs it with croissant style, from 0 to number.
-	 */		
- show: function(number) {
-	if (typeof(number) === 'number' && number < 11 && number > 0) {
-		var selection = select(".item");
-		for (var i = 0; i < number; i++) {
-			// transition: opacity 2s;
-			selection[i].style.display = 'inline-block';
-			// selection[i].style.opacity = 0;
-			// selection[i].style.transitionProperty = 'opacity';
-			// selection[i].style.transitionDuration = '2s';
-
-		}	
-	} else {
-		err('Unvalid parameter');
-	}
-},
-
-hideAll: function() {
-	var selection = select(".item");
-	for (var i = 0; i < selection.length; i++) {
-		selection[i].style.display = 'none';
-	}
-},
-
-/* handleButton() is going to display or hide a button.  
- * Hide left Button if the first item is displayed. If not show the left button.
- * hide right Button if the last item is displayed. If not show the right button.
- */	 	
-handleButton: function() {
-	var selection = select('.item');
-	//-------For Left Button----------------
-	var selButLeft = select('.button_left');
-	if (selection[0].style.display === 'inline-block') {
-		selButLeft[0].style.visibility = 'hidden';
-	} else {
-		selButLeft[0].style.visibility = 'visible';
-	}
-	//-------For Right Button----------------
-	var selButRight = select('.button_right');
-	if (selection[selection.length - 1].style.display === 'inline-block') {
-		selButRight[0].style.visibility = 'hidden';
-	} else {
-		selButRight[0].style.visibility = 'visible';
-	}
-},
-
-noneFirst: function() {
-	var selection = select('.item');
-	for (var i = 0 ; i < selection.length; i++) {
-		if (getComputedStyle(selection[i]).display === 'inline-block') {
-			selection[i].style.display = 'none';
-			i = selection.length -1;
-		}
-	}
-},
-
-noneLast: function() {
-	var selection = select('.item');
-	for (var i = selection.length - 1; i > -1; i--) {
-		if (getComputedStyle(selection[i]).display === 'inline-block') {
-			selection[i].style.display = 'none';
-			i = 0;
-		}
-	}
-},
-
-inlineBlockFirst: function() {
-	var selection = select('.item');
-	for (var i = 0 ; i < selection.length; i++) {
-		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] !== selection[0]) {
-			selection[i-1].style.opacity = 0;
-			selection[i-1].style.display = 'inline-block';
-			i = selection.length - 1;
-		}
-	}
-},
-
-inlineBlockLast: function() {
-	var selection = select('.item');
-	for (var i = selection.length - 1 ; i > -1 ; i--) {
-		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] !==
-				selection[selection.length - 1]) {
-			selection[i+1].style.opacity = 0;
-			selection[i+1].style.display = 'inline-block';
-			i = 0;
-		} 
-	}
-},
-
-init: function() {
-	//This function gonna display the correct number of items on the carousel.
-	if (window.innerWidth <= 1025 && window.innerWidth > 835) {
-		carousel.hideAll();
-		carousel.show(3);
-	} else if (window.innerWidth <= 835 && window.innerWidth > 625) {
-		carousel.hideAll();
-		carousel.show(2)
-	} else if (window.innerWidth <= 625) {
-		carousel.hideAll();
-		carousel.show(1);
-	} else { 
-		carousel.hideAll();
-		carousel.show(4);
-	}
-	carousel.handleButton();
-	carousel.handleMargin();
-},
-
-nextExist: function() {
-	var selection = select('.item');
-	var sel = select('.item');
-	var lastItem = sel.pop();
-	for (var i = selection.length - 1; i > -1; i--) {
-		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] === lastItem) {
-			return false;
-		} else {
-			return true;;
-
-		}
-	}
-},
-
-previousExist: function() {
-	var selection = select('.item');
-	var sel = select('.item');
-	var firstItem = sel.shift();
-	for (var i = 0; i < selection.length; i++) {
-		if (getComputedStyle(selection[i]).display === 'inline-block' && selection[i] === firstItem) {
-			return false;
-		} else {
-			return true;;
-
-		}
-	}
+function me() {
+	elem = ['premier','second'];
+	return elem;
 }
+function tre() {
+	var prathe =  me();
+	console.log(prathe[0]);
 
-} //The end of the Namespace 'carousel'
-carousel.init();
-window.onresize = function () {
-	carousel.init();
-	carousel.handleButton();
-	carousel.handleMargin();
 }
-var selButRight = select('.button_right');
-var selButLeft = select('.button_left');
-selButRight = selButRight[0];
-selButLeft = selButLeft[0];
-function next() {
-	if (carousel.nextExist()) {
-		carousel.inlineBlockLast();
-		opacityLast();
-		carousel.noneFirst();
-		carousel.handleMargin();
-		carousel.handleButton();
-	}
-}
-function previous() {
-	if (carousel.previousExist()) {
-		carousel.inlineBlockFirst();
-		opacityFirst();
-		carousel.noneLast();
-		carousel.handleMargin();
-		carousel.handleButton();
-	}
-}
-selButRight.onclick = function () {
-	next();
-};
-selButLeft.onclick = function () {
-	previous();
-}
+tre();
 
-function opacityLast() {
-	var selection = select('.item');
-	var lastItem;
-	for (var i = selection.length - 1; i > -1; i--) {
-		if (getComputedStyle(selection[i]).display === 'inline-block') {
-			lastItem = selection[i];
-			i = 0;
-		}
-		if (lastItem) {
-			function resetOpacity() {
-				lastItem.style.opacity = 1;
-			}
-			resetOpacity();
-		}
-	}
-}
+// function first(name){
+// 	console.log('My name is '+name);
+// }
 
-function opacityFirst() {
-	var selection = select('.item');
-	var firstItem;
-	for (var i = 0; i < selection.length; i++) {
-		if (getComputedStyle(selection[i]).display === 'inline-block') {
-			firstItem = selection[i];
-			i = selection.length - 1;
-		}
-		if (firstItem) {
-			function resetOpacity() {
-				firstItem.style.opacity = 1;
-			}
-			resetOpacity();
-		}
-	}
-}
-
-var fun = function prepare() {
-	alert("Ceci est une fonction qu'importe la maniére de la fonction de retour...");
-}
-alert(fun);
-function calll(prep){
-	prep();
-}
-calll(fun);
+// function second(yourName,callback) {
+// 	callback(yourName);
+// }
+// second('Ibrahima Aidara',first);
 </script>
-
-<div class="p 1 2">fgsdfgsdfgsdf</div>
-<div class="div"></div>
-<div class="div"></div>
-<div class="div"></div>
-<button id="button">Click Here.</button>
-<style type="text/css">
-	.0
-	{
-		color: red; 
-	}
-</style>
-
-
-<script type="text/javascript">
-	var selection = select('.0');
-	selection = selection[0];
-	console.log(selection.className);
-	var classes = selection.className.split(' ');
-	console.log(classes);
-	// the_but = the_but[0];
-
-	// var the_div = select('.div');
-	// the_div = the_div[0];
-	
-	// the_but.onclick = function () {
-
-	// 	the_div.style.opacity = 0;
-	// 	// the_div.style.opacity = 1;
-	// }
-	// var sel = select('.div');
-	
-	// sel[0].style.opacity = 1;
-// setTimeout((function () {
-// 	return alert('merde');
-// })(),1000);  
-</script>
-
+</div>
 </body>
 
 </html>

@@ -1,0 +1,2 @@
+becareful the 'Retrouver annonceur ou annonce' categorie is not displayed well after the resize. to test it display the tab 
+then resize down the page.
