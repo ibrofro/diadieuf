@@ -254,11 +254,11 @@
 <!-- ________________________________________Search__________________________________________________ -->
 
 <div id="search">
-<div id="categories_button">Toutes les categories <img style="color: white" src="icon/arrow_white.png"></div>
+<div id="categories_button"><span id="cat_but_text">Toutes les categories</span> <img style="color: white" src="icon/arrow_white.png"></div>
 <form id="search_form">
 	<select style="display:none">
 	<option value="tous">tous</option></select>
-	<div id="search_bar"><input type="text" name=""></div><button id="submit_button" type="submit">Rechercher</button>
+	<div id="search_bar"><input type="text" name="" placeholder="Que Recherchez-vous?"></div><button id="submit_button" type="submit">Rechercher</button>
 </form>
 </div>
 
@@ -266,22 +266,23 @@
 <div class="close_categories"><img src="icon/close.png"></div>
 <div>
 <div class="tous categories_style">Toutes les categories</div>
+
 </div>
 
 <div class="group_container multimedia_container">
-<div class="multimedia categories_style">Multimedia</div>
-<div class="informatique sub_categories_style">Informatique</div>
-<div class="jeux sub_categories_style">Jeux/Console</div>
-<div class="image_et_son sub_categories_style">Image et Sons</div>
-<div class="telephonie sub_categories_style">Telephonie</div>
+<div class="multimedia categories_style">Multimedias</div>
+<div class="informatique sub_categories_style">Informatiques</div>
+<div class="jeux sub_categories_style">Jeux et Consoles</div>
+<div class="image_et_son sub_categories_style">Images et Sons</div>
+<div class="telephonie_et_tablette sub_categories_style">Téléphones et Tablettes</div>
+<div class="accessoire_multimedia sub_categories_style">Accessoires Multimédia</div>
 </div>
 
 <div class="group_container immobilier_container">
-<div class="immobilier categories_style">Immobilier</div>
+<div class="immobilier categories_style">Immobiliers</div>
 <div class="ventes_immobilieres sub_categories_style">Ventes Immobilieres</div>
-<div class="location_collocation sub_categories_style">Locations/Colocations</div>
-<div class="bureau sub_categories_style">Bureau</div>
-<div class="boutique sub_categories_style">Boutique</div>
+<div class="location sub_categories_style">Locations</div>
+<div class="colocation sub_categories_style">Colocations</div>
 </div>
 
 <div class="group_container autos_motos">
@@ -293,27 +294,27 @@
 </div>
 
 <div class="group_container vetement">
-<div class="vetement categories_style">Vetements</div>
-<div class="homme sub_categories_style">Hommes</div>
-<div class="femmes sub_categories_style">Femmes</div>
-<div class="bebe sub_categories_style">Bebes</div>
-<div class="equipement_moto sub_categories_style">Equipements Motos</div>
+<div class="vetement categories_style">Vêtements</div>
+<div class="homme sub_categories_style">Vêtm.../Hommes</div>
+<div class="femmes sub_categories_style">Vêtm.../Femmes</div>
+<div class="bebe sub_categories_style">Vêt.../Bébés</div>
+<div class="montre_bijou sub_categories_style">Montres et Bijoux</div>
+<div class="accessoire_vetement sub_categories_style">Accessoires de Style</div>
 </div>
 
 <div class="group_container equipement_maison">
-<div class="vetement categories_style">Vetements</div>
-<div class="homme sub_categories_style">Hommes</div>
-<div class="femmes sub_categories_style">Femmes</div>
-<div class="bebe sub_categories_style">Bebes</div>
-<div class="equipement_moto sub_categories_style">Equipements Motos</div>
+<div class="equipement_de_maison categories_style">Equipement de maison</div>
+<div class="homme sub_categories_style">Meubles</div>
+<div class="femmes sub_categories_style">Electromenager</div>
+<div class="bebe sub_categories_style">Animaux Doméstiques</div>
+<div class="equipement_moto sub_categories_style">Décorations/Access...</div>
 </div>
 
-<div class="group_container vetement">
-<div class="vetement categories_style">Vetements</div>
-<div class="homme sub_categories_style">Hommes</div>
-<div class="femmes sub_categories_style">Femmes</div>
-<div class="bebe sub_categories_style">Bebes</div>
-<div class="equipement_moto sub_categories_style">Equipements Motos</div>
+<div class="group_container emploi">
+<div class="emploi categories_style">Emploi</div>
+<div class="vetement_homme sub_categories_style">Demande d'emploi</div>
+<div class="vetement_femme sub_categories_style">Offre d'emploi</div>
+
 </div>
 </div>
 <span id="bv"></span>
@@ -323,7 +324,7 @@
 <script type="text/javascript" src="my_functions.js"></script>
 <script type="text/javascript" src="header.js"></script>
 <script type="text/javascript" src="carousel.js"></script>
-<script type="text/javascript" src="search.js"></script>
 <script type="text/javascript" src="categories.js"></script>
+<script type="text/javascript" src="search.js"></script>
 </body>
 </html>

@@ -51,14 +51,7 @@ selAllCategories: function(callback) {
 	return allCategories;	
 },
 
-whereToReturn: function (elementOnDom) {
-	var selection = select(elementOnDom);
-	selection = selection[0];
-	if (selection.textContent) {
-		return selection;
-	}
-	
-},
+yourElem:null,
 
 categoriesClicked: function() {
 	res = this.selAllCategories(this.selCategoriesContainer);
@@ -71,30 +64,26 @@ categoriesClicked: function() {
 	// return alert(categoriesNeeded.length);
 	for (var y = 0; y < categoriesNeeded.length; y++) {
 		categoriesNeeded[y].onclick = function (e) {
-			alert("Tu viens de cliquer sur "+e.target.textContent);
-			// this.finalReturn =  e.target.textContent;
-			// var bv = select('#bv');
-			// bv = bv[0];
-			var pasteHere = categories.whereToReturn;
-			categories.whereToReturn = e.target.textContent;
+			categories.yourElem.textContent = e.target.textContent;
+			var selCategories = select('#categories_container');
+			selCategories[0].style.display='none';
 		};
 	}
 }
 
-	
-	
-
 };//The end of the namespace...
-// var bv = select('#bv');
-// bv = bv[0];
-categories.whereToReturn('#bv');
-categories.categoriesClicked();
-
-bv.innerHTML = categories.finalReturn;
-// categories.categoriesClicked();
-
 
 var selCloseIcon = select('.close_categories');
 selCloseIcon[0].onclick = function () {
 	categories.close();
 };
+
+document.onclick=function(e) {
+		e = e || window.event;
+		var selCategories = select('#categories_container');
+			selCategories[0].style.display='none';
+	};
+	var selCategories = select('#categories_container');
+			selCategories[0].onclick = function (e) {
+				e.stopPropagation();
+			};

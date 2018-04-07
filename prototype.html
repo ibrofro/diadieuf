@@ -5,52 +5,33 @@
 	<link rel="stylesheet" type="text/css" href="prototype.css">
 </head>
 <body>
-<div id="elem">
-<div class="child prefix">Child</div>
-<div class="child">Child</div>
-<div class="child">Child</div>
-<div class="child">Child</div>
-<div class="child">Child</div>
-<div class="child">Child</div>
-<div class="crazy">another Type</div>
-<div class="crazy">another Type</div>
-<div class="crazy">another Type</div>
-<div class="crazy">another Type</div>
+<div id="big_container">
+<div class="group_container multimedia_container">
+<div class="multimedia categories_style">Multimedia</div>
+<div class="informatique sub_categories_style">Informatique</div>
+<div class="jeux sub_categories_style">Jeux/Console</div>
+<div class="image_et_son sub_categories_style">Image et Sons</div>
+<div class="telephonie sub_categories_style">Telephonie</div>
+</div>
+
+<div class="group_container immobilier_container">
+<div class="immobilier categories_style">Immobilier</div>
+<div class="ventes_immobilieres sub_categories_style">Ventes Immobilieres</div>
+<div class="location sub_categories_style">Locations</div>
+<div class="colocation sub_categories_style">Colocations</div>
+</div>
+
+<div class="group_container autos_motos">
+<div class="auto_moto categories_style">Autos/Motos</div>
+<div class="voiture sub_categories_style">Voitures</div>
+<div class="Moto sub_categories_style">Motos</div>
+<div class="equipement_auto sub_categories_style">Equipements Autos</div>
+<div class="equipement_moto sub_categories_style">Equipements Motos</div>
+</div>
+</div>
 <script type="text/javascript" src="my_functions.js"></script>
 <script>
-// 	var selElem = select('#elem');
-// 	selElem = selElem[0].childNodes;
-// 	for (var i = 0; i < selElem.length; i++) {
-// 		if(selElem[i].nodeName === 'DIV'){
-// 			selElem[i].onclick = function () {
-// 				alert(this.innerText);
-// 			};
-// 		}
-// 	}
-// var selTest = select('.child');
-// selTest = selTest[0];
-// console.log(selTest.className);	
 
-
-function me() {
-	elem = ['premier','second'];
-	return elem;
-}
-function tre() {
-	var prathe =  me();
-	console.log(prathe[0]);
-
-}
-tre();
-
-// function first(name){
-// 	console.log('My name is '+name);
-// }
-
-// function second(yourName,callback) {
-// 	callback(yourName);
-// }
-// second('Ibrahima Aidara',first);
 </script>
 </div>
 </body>

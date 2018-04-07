@@ -5,7 +5,10 @@ div.tous
 }
 #categories_container
 {
-	width: 780px;
+	/* border: 1px solid; */
+	position:  relative;
+	left: -20px;
+	width: 105%;
 	height: 427px;
 	background-color: white;
 	box-shadow: 0px 1px 0.99px 0.01px rgba(0, 0, 0, 0.35);
@@ -43,6 +46,7 @@ div.close_categories
 .group_container
 {
 	display: inline-block;
+	vertical-align: top;
 	text-align: left;
 	margin: 0px 7px 0px 7px;
 	width: 200px;

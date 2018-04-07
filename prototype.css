@@ -1,4 +1,12 @@
-div
+#big_container
+{
+	width: 630px;
+	border:1px solid red;
+}
+.group_container
 {
 	border:1px solid black;
+	width: 200px;
+	display: inline-block;
+	vertical-align: top;
 }
